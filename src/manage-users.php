@@ -1,6 +1,7 @@
 <?php
   include('estructura/header-admin.php');
-  include('manage-users-server.php');
+  include('funciones.php');
+
 ?>
 
 <main class="admin-options">
@@ -33,7 +34,8 @@
 
   <div class="users-info">
   <?php
-          while($row = mysqli_fetch_array($results)){
+    $usuarios = get('usuarios');
+    foreach($usuarios as $row) : 
   ?>
     <div class="row">
       <div>
@@ -49,12 +51,12 @@
 
         <article class="col-12 col-xs-4 col-sm-4 col-md-4">
           <!-- image -->
-          <a href="manage-users-server.php?del=<?php echo $row['id_usuario']; ?>"><img class="icon" src="imgs/trash.svg"></a>
+          <a href="eliminar.php?url=manage-users&tipo=usuarios&id=<?php echo $row['id']; ?>"><img class="icon" src="imgs/trash.svg"></a>
         </article>
       </div>
     </div>
   <?php
-          }
+    endforeach;
   ?>
 
   </div>

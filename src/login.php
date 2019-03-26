@@ -38,7 +38,7 @@
             <input name="correo" class="form-signin" type="email" placeholder="Email"><br>
             <p class="input-title"> Password </p>
             <input name="contrasena" class="form-signin" type="password" placeholder="Password"><br>
-            <button class="signin-button" type="submit" onclick="profile.php?edit=<?php echo $row['id_usuario']; ?>">Create account</button>
+            <button class="signin-button" type="submit" onclick="profile.php?edit=<?php echo $row['id']; ?>">Create account</button>
         </form>
    </div>
   </article>

@@ -15,7 +15,7 @@
 <section class="subir-foto">
     <h2 class="Tertiary-title">Product details</h2>
 </section>
-<form action="handbag-database.php" method="post">
+<form action="handbag-database.php" method="post" enctype="multipart/form-data">
   <section id="signin-center">
     <article class="col-12 col-md-6">
       <div>

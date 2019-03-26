@@ -1,5 +1,9 @@
 <?php
+  include('funciones.php');
   include('estructura/header-admin.php');
+  $url_pagina = $_SERVER[REQUEST_URI];
+  $url_pagina = str_replace('/', '', $url_pagina);
+  $url_pagina = str_replace('.php', '', $url_pagina);
 ?>
 
 <main class="admin-options">
@@ -32,31 +36,39 @@
 
   <div class="users-info">
   <?php
-          for( $i=1; $i<4; $i++ ):
+    $handbags = get('handbags');
+    if( $handbags ) :
+    foreach( $handbags as $handbag ):
+      //print_x($handbag);
   ?>
     <div class="row">
       <div>
         <article class="col-12 col-xs-4 col-md-4">
           <!-- image -->
-          <p>Nombre del producto</p>
+          <p><?php echo $handbag['product_name'] ?></p>
         </article>
 
         <article class="col-12 col-xs-4 col-md-4">
           <!-- image -->
-          <p>$198.00</p>
+          <p>$<?php echo number_format(@$handbag['price']) ?></p>
         </article>
 
         <article class="col-12 col-xs-4 col-md-4">
           <!-- image -->
-          <a href="">
+          <a href="eliminar.php?url=<?php echo $url_pagina ?>&tipo=handbags&id=<?php echo $handbag['id'] ?>">
           <img class="icon" src="imgs/trash.svg">
           </a>
         </article>
       </div>
     </div>
   <?php
-    endfor;
+    endforeach;
+    else :
   ?>
+    <div class="sin-resultados">
+      No hay handbags!
+    </div>
+    <?php endif; ?>
 </div>
 
 <section class="subir-foto">

@@ -1,13 +1,23 @@
 <?php
   include('estructura/header.php');
+
+  if($_POST != NULL) {
+    if(update('usuarios', $_SESSION['id'], $_POST)) {
+      //echo "Se actualizo";
+      $_SESSION = single('usuarios', $_SESSION['id']);
+    }
+    else {
+      //echo "Algo fallo";
+    }
+  }
+
 ?>
 
 <div class="container">
     <h1 class="profile-title">Hello, <?php echo $_SESSION['nombre']; ?> </h1><a href="logout.php" class="rose-link"> Cerrar sesion</a>
 
     <!-- nombre lleva variable jiji -->
-  <form action="edit-profile.php" method="post">
-  <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
+  <form action="profile.php" method="post" enctype="multipart/form-data">
 
     <div class="row">
         <!-- left column -->
@@ -79,7 +89,7 @@
 
             <div class="col-xs-12">
             <div class="input-group button-wrapper">
-                <input type="submit" class="primary-button" name="save" value="Save Changes">
+                <button class="primary-button"> Save Changes </button>
             </div>
             </div>
         </div>
