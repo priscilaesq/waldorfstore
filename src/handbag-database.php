@@ -29,7 +29,7 @@ include("funciones.php");
   update_imagen($tabla,$id,'image_1');
   update_imagen($tabla,$id,'image_2');
   update_imagen($tabla,$id,'image_3');
-  
+
 
   $db->close();
 
