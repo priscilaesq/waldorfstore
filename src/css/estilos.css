@@ -125,15 +125,18 @@ body{
  }
 
  #carrusel{
+   margin-top: 15px;
      margin-bottom: 25px;
  }
 
  /*hero handbag--------------------------------------------------------*/
 #hero-handbag{
+  margin-top: 5px;
   margin-bottom: 25px;
 }
 
 #hero-handbag img{
+  margin-top: 5px;
   width: 100%;
 }
 
