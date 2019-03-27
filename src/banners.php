@@ -5,7 +5,7 @@
 <main class="admin-options">
   <div class="container">
 
-  <h1 class="admin-title"> Banners</h1> 
+  <h1 class="admin-title"> Banners</h1>
 <div>
 
 <form method="post" action="banners-upload.php" enctype="multipart/form-data">
