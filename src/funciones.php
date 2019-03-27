@@ -12,16 +12,30 @@ function registrar_subscriptor($email) {
   $db = mysqli_connect('db','root','root','main');
   $query = "INSERT INTO subscriptores ( email )
   VALUES ('$email')";
-  $result = $bd->query($query);
+  $result = $db->query($query);
   $db->close();
   return $result;
+}
+
+
+function registrar_banner() {
+  $db = mysqli_connect('db','root','root','main');
+  $query = "INSERT INTO banners ( img )
+  VALUES (' ') ";
+  $result = $db->query($query);
+  if($result) {
+    return $db->insert_id;
+  }
+  else {
+    return false;
+  }
 }
 
 // SUPONIENDO QUE $ARGS ES POST Y LOS INPUTS SE LLAMAN IGUAL QUE EN LA BASE DE DATOS
 // $args = [
 //   'contrasena' => md5('holi'),
 // ]
-// update('usuarios', $id_usuario, $args); 
+// update('usuarios', $id_usuario, $args);
 
 
 function update($tabla, $id, $args) {
