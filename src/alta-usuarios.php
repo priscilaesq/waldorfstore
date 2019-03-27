@@ -21,7 +21,16 @@
   $resultcheck = mysqli_num_rows($result);
 
   ///Checar que el correo exista o no
-  if($resultcheck > 0){
+  if($resultcheck > 0){?>
+    <div id="overlay"></div>
+    <div id="dialogo" class="col-sm-8 col-md-4">
+            <div>
+                <h2 class="Primary-title"> OOPSIS! </h2><br>
+                <p> This email is being used</p>
+            </div>
+            <a href="#" id="cerrar"><img src="imgs/icono-cerrar.png"> </a>
+    </div>
+    <?php
     echo 'Usario o correo ya existen';
     exit();
   }else{
@@ -32,3 +41,4 @@
    exit();
   }
 }
+?>
