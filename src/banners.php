@@ -43,20 +43,20 @@
 
   <section class= "current-photos">
       <div class="row">
-        <?php
-          for( $i=1; $i<4; $i++ ):
-        ?>
+  <?php
+    $banners = get("banners");
+    foreach($banners as $banner):
+  ?>
         <div class="col-12 col-md-6">
           <article class="uploaded">
-            <img class="thumbnail-tiny" src="imgs/home-amelia-spade.png">
-            <p>file name here.ext</p>
-            <a class="dark-link" href="eliminar.php?nombre=<?php echo $archivo; ?>">Eliminar</a>
-            <a href="/banners/<?php echo $archivo; ?>" target="_blank"> <?php echo $archivo; ?></a>
+            <img class="thumbnail-tiny" src="<?php echo $banner['img'] ?>">
+            <p><?php echo $banner["img"] ?></p>
+            <a class="dark-link" href="eliminar.php?url=banners&tipo=banners&id=<?php echo $banner['id']; ?>">Eliminar</a>
 
           </article>
         </div>
         <?php
-          endfor;
+          endforeach;
         ?>
       </div>
   </section>

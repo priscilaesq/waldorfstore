@@ -508,6 +508,12 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 15px;
 }
 
+.cerrar-bonito{
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
 .user-photos{
   justify-content: center;
   align-items: center;
