@@ -18,18 +18,18 @@ include("funciones.php");
   $materials = $_POST['materials'];
   $details = $_POST['details'];
 
-  $query = "INSERT INTO handbags (product_name, price, descripcion, dimensions, materials, details)
+  $query = "INSERT INTO wallets (product_name, price, descripcion, dimensions, materials, details)
              VALUES ('$product_name','$price','$descripcion','$dimensions','$materials','$details')";
   $result = $db->query($query);
 
-  //OBTENER ID DEL HANDBAG SUBIDO
+
+  //OBTENER ID DEL WALLETS SUBIDO
   $id = $db->insert_id;
-  $tabla = 'handbags';
+  $tabla = 'wallets';
 
   update_imagen($tabla,$id,'image_1');
   update_imagen($tabla,$id,'image_2');
   update_imagen($tabla,$id,'image_3');
-
 
   $db->close();
 

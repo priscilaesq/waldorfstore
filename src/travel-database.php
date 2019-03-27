@@ -1,6 +1,6 @@
 <?php
 include("funciones.php"); 
-  session_start();
+  session_start(); 
   //conectando la base de datos
   $db = mysqli_connect('db','root','root','main');
 
@@ -18,18 +18,18 @@ include("funciones.php");
   $materials = $_POST['materials'];
   $details = $_POST['details'];
 
-  $query = "INSERT INTO handbags (product_name, price, descripcion, dimensions, materials, details)
+  $query = "INSERT INTO travel (product_name, price, descripcion, dimensions, materials, details)
              VALUES ('$product_name','$price','$descripcion','$dimensions','$materials','$details')";
   $result = $db->query($query);
 
-  //OBTENER ID DEL HANDBAG SUBIDO
+
+  //OBTENER ID DEL WALLETS SUBIDO
   $id = $db->insert_id;
-  $tabla = 'handbags';
+  $tabla = 'travel';
 
   update_imagen($tabla,$id,'image_1');
   update_imagen($tabla,$id,'image_2');
   update_imagen($tabla,$id,'image_3');
-
 
   $db->close();
 

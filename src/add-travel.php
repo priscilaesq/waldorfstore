@@ -12,12 +12,12 @@
 <div class="container">
 <div class="row">
 
-<h1 class="add-title"> Add new handbag</h1>
+<h1 class="add-title"> Add new travel bag</h1>
 
 <section class="subir-foto">
     <h2 class="Tertiary-title">Product details</h2>
 </section>
-<form action="handbag-database.php" method="post" enctype="multipart/form-data">
+<form action="travel-database.php" method="post" enctype="multipart/form-data">
   <section id="signin-center">
     <article class="col-12 col-md-6">
       <div>
