@@ -4,15 +4,13 @@
 
 <main class="admin-options">
   <div class="container">
-  <h1 class="admin-title"> Banners</h1>
+  <h1 class="admin-title"> Banners jijiji</h1>
 
 <div>
 
-
-
 <form method="post" action="banners-upload.php" enctype="multipart/form-data">
   <input type="hidden" name="size" value="1000000">
-    <div> 
+    <div>
       <input type="file" name="img">
     </div>
       <input type="submit" name="upload" value="Upload Image">
