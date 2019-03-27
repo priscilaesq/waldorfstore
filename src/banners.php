@@ -7,15 +7,17 @@
     $id_banner = registrar_banner();
     if( $id_banner ) {
       if(update_imagen('banners',$id_banner,'img')) {
-        $message = "wrong answer";
+        $message = "Congrats! The photo has been uploaded";
           echo "<script type='text/javascript'>alert('$message');</script>";
       }
       else {
-        echo 'no se subio';
+        $message = "Oh no! Unable to upload the photo";
+          echo "<script type='text/javascript'>alert('$message');</script>";
       }
     }
     else {
-      echo 'no se registro';
+      $message = "Oh no! The photo couldn't be registered";
+          echo "<script type='text/javascript'>alert('$message');</script>";
     }
   }
 ?>

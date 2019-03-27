@@ -125,13 +125,11 @@ body{
  }
 
  #carrusel{
-     margin-top: 115px;
      margin-bottom: 25px;
  }
 
  /*hero handbag--------------------------------------------------------*/
 #hero-handbag{
-  margin-top: 115px;
   margin-bottom: 25px;
 }
 
@@ -183,14 +181,6 @@ a:hover{
 
 
 /* Product details thumbnail gallery -------------------------------------*/
-.espacio-gallery{
-  margin-top:140px;
-}
-
-.espacio-titulo{
-  margin-top:180px;
-}
-
 .image-gallery {
   margin: 0 auto;
   display: table;
@@ -356,13 +346,8 @@ input[type=number]::-webkit-outer-spin-button {
 .signin-button:hover{
   color: #f8baca;
 }
-#signin{
-  margin-top: 150px;
-}
 
-#sign-in{
-   margin-top: 200px;
-}
+
 
 .iniciar{
    display: inline-block;
@@ -488,7 +473,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .admin-title {
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   font-family: 'Playfair Display';
@@ -497,7 +481,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .profile-title {
-  margin-top: 110px;
   display: flex;
   font-family: 'Playfair Display';
   font-weight: 700;
@@ -517,7 +500,7 @@ input[type=number]::-webkit-outer-spin-button {
 .uploaded{
   padding: 10px;
 }
-/* isma stuff*/
+
 
 .uploaded {
   display: flex;

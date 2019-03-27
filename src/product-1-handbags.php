@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <center>
-      <article class="col-12 col-sm-8 col-md-6 espacio-gallery">
+      <article class="col-12 col-sm-8 col-md-6">
         <div class="image-gallery">
           <aside class="thumbnails">
             <a href="#" class="selected thumbnail" data-big="/imgs/p1-handbags-1-large.png">
@@ -27,7 +27,7 @@
       </article>
     </center>
 
-    <article class="col-12 col-sm-4 col-md-offset-1 col-md-5 espacio-titulo">
+    <article class="col-12 col-sm-4 col-md-offset-1 col-md-5">
       <h3 class="pdetails-title"> Dorie medium bucket bag </h3>
       <p class="pdetails-precio"> $398.00 </p>
       <br>
