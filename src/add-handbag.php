@@ -2,6 +2,8 @@
   include('estructura/header-admin.php');
 ?>
 
+
+
 <div class="container-fluid">
 <img class="bg-image" src="imgs/bg.jpeg">
 </div>
