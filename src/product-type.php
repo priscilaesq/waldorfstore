@@ -2,7 +2,7 @@
 
   include('estructura/header-admin.php');
 
-?>
+?> 
 
 <section class="margen-header-p">
     <br>
@@ -28,7 +28,9 @@
             <center>
             <article class="col-12 col-sm-12 col-md-4">
             <img class="icon-resize-wallet" src="imgs/purse.svg"><br>
+            <form action="add-wallet.php">
             <button class="outline-button"> Wallets </button>
+            </form>
             </article>
             </center>
 
@@ -37,7 +39,9 @@
             <center>
             <article class="col-12 col-sm-12 col-md-4">
             <img class="icon-resize" src="imgs/002-bag-1.svg"><br>
+            <form action="add-travel.php">
             <button class="outline-button"> Travel </button>
+            </form>
             </article>
             </center>
 
