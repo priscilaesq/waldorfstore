@@ -3,6 +3,8 @@
   include('alta-usuarios.php');
 
 ?>
+<div class="container-fluid">
+</div>
 
 <section id="signin">
 <div class="container">
@@ -40,7 +42,7 @@
         </form>
    </div>
   </article>
- 
+
 </div>
 </div>
 </section>
