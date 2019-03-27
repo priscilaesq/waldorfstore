@@ -1,7 +1,7 @@
 <?php
   include('funciones.php');
   include('estructura/header-admin.php');
-  $url_pagina = $_SERVER[REQUEST_URI];
+  $url_pagina = $_SERVER['REQUEST_URI'];
   $url_pagina = str_replace('/', '', $url_pagina);
   $url_pagina = str_replace('.php', '', $url_pagina);
 ?>
@@ -66,7 +66,7 @@
     else :
   ?>
     <div class="sin-resultados">
-      No hay handbags!
+      No handbags!
     </div>
     <?php endif; ?>
 </div>
@@ -128,7 +128,7 @@
     else :
   ?>
     <div class="sin-resultados">
-      No hay wallets!
+      No wallets!
     </div>
     <?php endif; ?>
 </div>
@@ -190,7 +190,7 @@
     else :
   ?>
     <div class="sin-resultados">
-      No hay travel bags!
+      No travel bags!
     </div>
     <?php endif; ?>
 </div>
