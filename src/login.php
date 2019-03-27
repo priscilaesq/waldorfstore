@@ -3,7 +3,6 @@
 ?>
 
 <div class="container-fluid">
-<img class="bg-image" src="imgs/bg.jpeg">
 </div>
 
 <section id="signin">
@@ -42,7 +41,7 @@
         </form>
    </div>
   </article>
- 
+
 </div>
 </div>
 </section>
