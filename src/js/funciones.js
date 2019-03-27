@@ -7,4 +7,15 @@ $('.thumbnail').on('click', function() {
   clicked.addClass('selected');
   $('.primary').empty().append($img.hide().fadeIn('slow'));
 });
+
+
+$('#boton').bind('click', function(){
+  $('#overlay').fadeIn(400, function(){
+    $('#dialogo').fadeIn();
+  });
+});
+
+$('#cerrar').bind('click', function(){
+  $('#overlay, #dialogo').fadeOut();
+  });
 });

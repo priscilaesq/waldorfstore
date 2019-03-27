@@ -4,7 +4,8 @@
 
 <main class="admin-options">
   <div class="container">
-  <h1 class="admin-title"> Banners JUJUJU </h1>
+
+  <h1 class="admin-title"> Banners</h1> 
 <div>
 
 
