@@ -67,7 +67,7 @@ function update_imagen($tabla,$id,$index) {
       $result = $db->query($query);
       return $result;
     }
-    else {
+    else { 
       return false;
     }
   }

@@ -11,7 +11,7 @@
 </section>
 
 <section id="handbags">
-<div class="container">
+<div class="container"> 
   <h1 class="Primary-title spacer">Handbags</h1>
   <div class="row">
   <?php

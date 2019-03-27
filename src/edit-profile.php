@@ -18,3 +18,4 @@
     header ('location: edit-profile.php');
   }
 ?>
+ 
