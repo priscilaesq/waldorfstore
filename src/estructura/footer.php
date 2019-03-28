@@ -6,7 +6,7 @@
     <article>
     <center><h2 class="Secondary-title"> Join our list! </h2>
         <?php
-            $url = $_SERVER[REQUEST_URI];
+            $url = $_SERVER['REQUEST_URI'];
             $url = str_replace('/', '', $url);
             $url = str_replace('.php', '', $url);
         ?>

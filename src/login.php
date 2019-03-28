@@ -1,7 +1,8 @@
 <?php
   include('estructura/header.php');
-?>
+  include('alta-usuarios.php');
 
+?>
 <div class="container-fluid">
 </div>
 
@@ -28,7 +29,7 @@
   <article class="col-12 col-md-6">
   <div class="create-container">
         <center><h3 class="Tertiary-title"> Create account </h3></center>
-        <form action="alta-usuarios.php" class="create-center" method="post">
+        <form action="login.php" class="create-center" method="post">
             <p class="input-title"> Name </p>
             <input name="nombre" class="form-signin" type="text" placeholder="Name"><br>
             <p class="input-title"> Last name </p>

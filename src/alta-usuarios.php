@@ -1,6 +1,6 @@
 <?php
-
   include 'db.php';
+if($_POST != NULL):
 
   ///asignando los campos del formulario a una variable
   $nombre = $_POST['nombre'];
@@ -11,7 +11,8 @@
 
   // verificar que no estén vacios
   if ($nombre == '' || $apellido == ''|| $contrasena == '' || $correo == '') {
-    echo 'No se han recibido los datos correctamente.';
+    $message = "No se han capturado los datos correctamente";
+    echo "<script type='text/javascript'>alert('$message');</script>";
   } else {
 
   ///seleccionar los renglones de la tabla
@@ -21,24 +22,17 @@
   $resultcheck = mysqli_num_rows($result);
 
   ///Checar que el correo exista o no
-  if($resultcheck > 0){?>
-    <div id="overlay"></div>
-    <div id="dialogo" class="col-sm-8 col-md-4">
-            <div>
-                <h2 class="Primary-title"> OOPSIS! </h2><br>
-                <p> This email is being used</p>
-            </div>
-            <a href="#" id="cerrar"><img src="imgs/icono-cerrar.png"> </a>
-    </div>
-    <?php
-    echo 'Usario o correo ya existen';
-    exit();
+  if($resultcheck > 0){
+    $message = "Username or email already exists";
+    echo "<script type='text/javascript'>alert('$message');</script>";
   }else{
    $query = "INSERT INTO usuarios (nombre, apellido, correo, contrasena)
              VALUES ('$nombre','$apellido','$correo','$contrasena')";
    $db->query($query);
-   echo 'EXITO! USUARIO REGISTRADO';
-   exit();
+   $message = "CONGRATS! Account registration successful";
+   echo "<script type='text/javascript'>alert('$message');</script>";
   }
 }
+endif;
+
 ?>

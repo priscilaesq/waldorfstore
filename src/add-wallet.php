@@ -3,7 +3,6 @@
 ?>
 
 
-
 <div class="container-fluid">
 <img class="bg-image" src="imgs/bg.jpeg">
 </div>
@@ -12,12 +11,12 @@
 <div class="container">
 <div class="row">
 
-<h1 class="add-title"> Add new handbag</h1>
+<h1 class="add-title"> Add new wallet</h1>
 
 <section class="subir-foto">
     <h2 class="Tertiary-title">Product details</h2>
 </section>
-<form action="handbag-database.php" method="post" enctype="multipart/form-data">
+<form action="wallet-database.php" method="post" enctype="multipart/form-data">
   <section id="signin-center">
     <article class="col-12 col-md-6">
       <div>
@@ -54,7 +53,7 @@
     <article class="col-12 col-sm-12 col-md-4">
       <label class="normal-text">
         <input type="file" name="image_1">
-      </label>
+      </label> 
       <br>
       <br>
     </article>
