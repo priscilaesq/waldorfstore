@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 28, 2019 at 05:54 AM
+-- Generation Time: Mar 28, 2019 at 06:17 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.2.14
 
@@ -183,6 +183,15 @@ CREATE TABLE `wallets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `wallets`
+--
+
+INSERT INTO `wallets` (`id`, `product_name`, `price`, `descripcion`, `dimensions`, `materials`, `details`, `image_1`, `image_2`, `image_3`) VALUES
+(1, 'amelia slim continental wallet', '198.00', '\"one of the many details that makes our amelia slim continental wallet unique is the way the quilting radiates from the bold, enamel spade. \"', '3\"h x 7\"w', 'smooth lambskin leather', 'slim continental wallet with zip-around closure', './imgs/wallets/1/image_1.jpeg', './imgs/wallets/1/image_2.jpeg', './imgs/wallets/1/image_3.jpeg'),
+(2, 'polly large pouch wristlet', '98.00', '\"we crafted our polly large pouch wristlet from soft pebbled leather that gets better with age.\"', '7\"h x 11\"w x 2\"d', 'pebbled leather', 'large wristlet with top zip closure', './imgs/wallets/2/image_1.jpeg', './imgs/wallets/2/image_2.jpeg', './imgs/wallets/2/image_3.jpeg'),
+(3, 'polly slim continental wallet', '178.00', '\"from the soft pebbled leather to the pretty tonal enamel spade, we think this polly slim continental wallet is just dreamy.\"', '3\"h x 7\"w x 0\"d', 'pebbled leather', 'slim continental wallet with zip-around closure', './imgs/wallets/3/image_1.jpeg', './imgs/wallets/3/image_2.jpeg', './imgs/wallets/3/image_3.jpeg');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -272,7 +281,7 @@ ALTER TABLE `usuariosadmin`
 -- AUTO_INCREMENT for table `wallets`
 --
 ALTER TABLE `wallets`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
