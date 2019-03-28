@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 27, 2019 at 04:26 AM
+-- Generation Time: Mar 27, 2019 at 11:57 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.2.14
 
@@ -38,7 +38,7 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `img`) VALUES
-(3, '5. Profile.png');
+(8, './imgs/banners/8/img.jpeg');
 
 -- --------------------------------------------------------
 
@@ -64,8 +64,10 @@ CREATE TABLE `handbags` (
 --
 
 INSERT INTO `handbags` (`id`, `product_name`, `price`, `descripcion`, `dimensions`, `materials`, `details`, `image_1`, `image_2`, `image_3`) VALUES
-(6, 'Dorie medium bucket bag', '398.00', '\"we made sure every inch would be functional when we designed our polly large convertible crossbody bag. for starters, it has a roomy interior.\"', '6\"h x 9\"w x 2\"d', 'pebbled leather, spade floral jacquard lining', 'crossbody bag with zip flap closure', './imgs/handbags/6/image_1.jpg', './imgs/handbags/6/image_2.jpg', './imgs/handbags/6/image_3.jpg'),
-(7, 'Dorie medium bucket bag', '200.00', '\"we made sure every inch would be functional when we designed our polly large convertible crossbody bag. for starters, it has a roomy interior.\"', '6\"h x 9\"w x 2\"d', 'pebbled leather, spade floral jacquard lining', 'crossbody bag with zip flap closure', './imgs/handbags/7/image_1.jpg', NULL, NULL);
+(8, 'margaux medium satchel', '298.00', '\"our margaux medium satchel is defined by its curved, feminine silhouette, molded handles and functional interior. crafted from refined grain leather, it features two slip pockets and a domed zipper compartment\"', '7.5\"h x 10.75\"w x 4.75\"d', 'refined grain leather', 'satchel with zipper closure, two interior slide pockets, interior zipper, pocket dual exterior pockets', './imgs/handbags/8/image_1.jpeg', './imgs/handbags/8/image_2.jpeg', './imgs/handbags/8/image_3.jpeg'),
+(9, 'margaux spade stud medium satchel', '358.00', '\"our margaux medium satchel is defined by its curved, feminine silhouette, molded handles and functional interior. crafted from refined grain leather and sprinkled with spade studs, it features two slip pockets and a domed zipper compartment\"', '7\"h x 10\"w x 4\"d', 'refined grain leather', 'interior zipper pocket, interior slide pocket, optional (and adjustable) shoulder strap', './imgs/handbags/9/image_1.jpeg', './imgs/handbags/9/image_2.jpeg', './imgs/handbags/9/image_3.jpeg'),
+(10, 'nicola twistlock shoulder bag', '398.00', '\"in the wise words of plato, \"things are not always as they seem.\" such is the case with our nicola twistlock medium shoulder bag. crafted from smooth leather and gently structured for everyday use\"', '6\"h x 9\"w x 2.1\"d', 'smooth italian leather', 'spade heart twistlock closure, interior zipper pocket', './imgs/handbags/10/image_1.jpeg', './imgs/handbags/10/image_2.jpeg', './imgs/handbags/10/image_3.jpeg'),
+(11, 'sam denim medium satchel', '198.00', '\"our story began in 1993 with a boxy, black nylon handbag called sam. we wanted something utilitarian and timeless--a bag that could go with everything from jeans to a cocktail dress.\"', '7.8\"h x 9\"w x 5\"d', 'denim', 'satchel with open top and tie closure, interior zipper pocket', './imgs/handbags/11/image_1.jpeg', './imgs/handbags/11/image_2.jpeg', './imgs/handbags/11/image_3.jpeg');
 
 -- --------------------------------------------------------
 
@@ -107,13 +109,6 @@ CREATE TABLE `travel` (
   `image_3` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `travel`
---
-
-INSERT INTO `travel` (`id`, `product_name`, `price`, `descripcion`, `dimensions`, `materials`, `details`, `image_1`, `image_2`, `image_3`) VALUES
-(1, 'Dorie medium bucket bag', '64.00', '\"we made sure every inch would be functional when we designed our polly large convertible crossbody bag. for starters, it has a roomy interior.\"', '6\"h x 9\"w x 2\"d', 'pebbled leather, spade floral jacquard lining', 'crossbody bag with zip flap closure', './imgs/travel/1/image_1.jpeg', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -130,15 +125,16 @@ CREATE TABLE `usuarios` (
   `codigo_postal` int(10) DEFAULT NULL,
   `ciudad` varchar(40) DEFAULT NULL,
   `ocupacion` varchar(40) DEFAULT NULL,
-  `hobbies` varchar(40) DEFAULT NULL
+  `hobbies` varchar(40) DEFAULT NULL,
+  `imagen_1` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `contrasena`, `direccion`, `codigo_postal`, `ciudad`, `ocupacion`, `hobbies`) VALUES
-(1, 'Katia editada', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', '', 1, 'Mexicali', 'Estudiante', '');
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `contrasena`, `direccion`, `codigo_postal`, `ciudad`, `ocupacion`, `hobbies`, `imagen_1`) VALUES
+(1, 'Katia editada', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', '', 21290, 'Mexicali', 'Estudiante', 'Comer', '');
 
 -- --------------------------------------------------------
 
@@ -232,13 +228,13 @@ ALTER TABLE `wallets`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `handbags`
 --
 ALTER TABLE `handbags`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `subscriptores`
@@ -268,7 +264,7 @@ ALTER TABLE `usuariosadmin`
 -- AUTO_INCREMENT for table `wallets`
 --
 ALTER TABLE `wallets`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
