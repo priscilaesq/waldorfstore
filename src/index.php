@@ -10,24 +10,31 @@
   <div id="myCarousel" class="carousel slide espacio-nav" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <?php
+        $banners = get("banners");
+        $i = 0;
+        while($i < sizeof($banners)) :
+      ?>
+      <li data-target="#myCarousel" data-slide-to="<?php echo $i ?>" class="<?php if($i == 0) echo 'active' ?>"></li>
+      <?php
+        $i++;
+        endwhile;
+      ?>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
-        <a href="handbags.php"><img src="imgs/home-banner-handbags.jpg" alt="Banner 1" style="width:100%;"></a>
+      <?php
+        $b = true;
+        foreach($banners as $banner):
+      ?>
+      <div class="item <?php if($b) echo 'active'; ?>">
+        <a href="handbags.php"><img src="<?php echo $banner["img"] ?>" alt="Banner 1" style="width:100%;"></a>
       </div>
-
-      <div class="item">
-        <a href="wallets.php"><img src="imgs/home-banner-wallets.jpg" alt="Banenr 2" style="width:100%;"></a>
-      </div>
-
-      <div class="item">
-        <a href="travel.php"><img src="imgs/home-banner-travel.jpg" alt="Banner 3" style="width:100%;"></a>
-      </div>
+        <?php
+          $b = false;
+          endforeach;
+        ?>
     </div>
 
     <!-- Left and right controls -->
@@ -75,9 +82,9 @@
       <h3 class="product-title"> Jayne large backpack </h3>
       <p class="price-home"> $278.00 </p>
       </article>
-  
 
-  
+
+
       <article class="col-12 col-sm-6 col-md-4">
       <img class="img-home" src="imgs/home-nicola-twistlock.png">
       <h3 class="product-title"> Nicola twistlock shoulder </h3>
