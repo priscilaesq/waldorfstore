@@ -32,7 +32,7 @@
                       <span class="toggle-icon"></span>
                   </button>
                     <div class="logo">
-                      <a class="logo-wrap">
+                      <a class="logo-wrap" href="banners.php">
                           <img class="logo-img logo-img-main" src="imgs/logo.svg" alt="Waldorf Logo">
                           <img class="logo-img logo-img-active" src="imgs/logo.svg" alt="Waldorf Logo">
                       </a>
