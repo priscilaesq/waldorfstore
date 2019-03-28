@@ -3,7 +3,7 @@
   include('estructura/header.php');
 
   $id = $_GET['id'];
-  $handbag = single("handbags",$id);
+  $wallet = single("wallets",$id);
 ?>
 
 
@@ -14,24 +14,24 @@
       <article class="col-12 col-sm-8 col-md-6">
         <div class="image-gallery">
           <aside class="thumbnails">
-            <a href="#" class="selected thumbnail" data-big="<?php echo $handbag['image_1'] ?>">
-              <div class="thumbnail-image" style="background-image: url(<?php echo $handbag['image_1'] ?>)"></div>
+            <a href="#" class="selected thumbnail" data-big="<?php echo $wallet['image_1'] ?>">
+              <div class="thumbnail-image" style="background-image: url(<?php echo $wallet['image_1'] ?>)"></div>
             </a>
-            <a href="#" class="thumbnail" data-big="<?php echo $handbag['image_2'] ?>">
-              <div class="thumbnail-image" style="background-image: url(<?php echo $handbag['image_2'] ?>)"></div>
+            <a href="#" class="thumbnail" data-big="<?php echo $wallet['image_2'] ?>">
+              <div class="thumbnail-image" style="background-image: url(<?php echo $wallet['image_2'] ?>)"></div>
             </a>
-            <a href="#" class="thumbnail" data-big="<?php echo $handbag['image_3'] ?>">
-              <div class="thumbnail-image" style="background-image: url(<?php echo $handbag['image_3'] ?>)"></div>
+            <a href="#" class="thumbnail" data-big="<?php echo $wallet['image_3'] ?>">
+              <div class="thumbnail-image" style="background-image: url(<?php echo $wallet['image_3'] ?>)"></div>
             </a>
           </aside>
-          <main class="primary" style="background-image: url('<?php echo $handbag['image_1'] ?>');"></main>
+          <main class="primary" style="background-image: url('<?php echo $wallet['image_1'] ?>');"></main>
         </div>
       </article>
     </center>
 
     <article class="col-12 col-sm-4 col-md-offset-1 col-md-5">
-      <h3 class="pdetails-title"><?php echo $handbag['product_name'] ?></h3>
-      <p class="pdetails-precio"> $<?php echo $handbag['price'] ?> </p>
+      <h3 class="pdetails-title"><?php echo $wallet['product_name'] ?></h3>
+      <p class="pdetails-precio"> $<?php echo $wallet['price'] ?> </p>
       <br>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
@@ -62,7 +62,7 @@
   <article class="col-12 col-xs-12 col-sm-12 col-md-offset-1 col-md-5">
     <div>
     <center>
-    <p class="pdetails-title centrar-texto">  <?php echo $handbag['descripcion'] ?></p>
+    <p class="pdetails-title centrar-texto">  <?php echo $wallet['descripcion'] ?></p>
     </center>
     </div>
   </article>
@@ -70,11 +70,11 @@
   <article class="col-12 col-xs-12 col-sm-12 col-md-offset-1 col-md-5">
   <div>
       <h3 class="details-titles">SIZE</h3>
-      <p class="details-description"> <?php echo $handbag['dimensions'] ?></p>
+      <p class="details-description"> <?php echo $wallet['dimensions'] ?></p>
       <h3 class="details-titles">MATERIALS</h3>
-      <p class="details-description"> <?php echo $handbag['materials'] ?> </p>
+      <p class="details-description"> <?php echo $wallet['materials'] ?> </p>
       <h3 class="details-titles"> DETAILS</h3>
-      <p class="details-description"> <?php echo $handbag['details'] ?> </p>
+      <p class="details-description"> <?php echo $wallet['details'] ?> </p>
    </div>
   </article>
 
