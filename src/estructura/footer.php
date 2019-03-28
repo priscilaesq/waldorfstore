@@ -4,7 +4,7 @@
 <section class="footer">
 <div class="container-fluid">
     <article>
-    <center><h2 class="Primary-title"> Join our list! </h2>
+    <center><h2 class="Secondary-title"> Join our list! </h2>
         <?php
             $url = $_SERVER['REQUEST_URI'];
             $url = str_replace('/', '', $url);
