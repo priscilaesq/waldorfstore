@@ -33,7 +33,7 @@
       <h3 class="pdetails-title"><?php echo $handbag['product_name'] ?></h3>
       <p class="pdetails-precio"> <?php echo $handbag['price'] ?> </p>
       <br>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="eljoshua@live.com">
       <input type="hidden" name="item_name" value="Donation">
