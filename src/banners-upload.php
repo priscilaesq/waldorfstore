@@ -1,7 +1,7 @@
 <?php
   include 'db.php';
 
-  $msg="";
+  $msg=""; 
 
   if(isset($_POST['upload'])){
     $target= "banners/".basename($_FILES['img']['name']);

@@ -4,9 +4,6 @@
 
 
 
-<div class="container-fluid">
-<img class="bg-image" src="imgs/bg.jpeg">
-</div>
 
 <section id="signin">
 <div class="container">

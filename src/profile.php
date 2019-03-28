@@ -4,6 +4,9 @@
   if($_POST != NULL) {
     if(update('usuarios', $_SESSION['id'], $_POST)) {
       //echo "Se actualizo";
+      if($_FILES['imagen_1']['tmp_name'] != ''){
+        update_imagen('usuarios',$_SESSION['id'],"imagen_1");
+      }
       $_SESSION = single('usuarios', $_SESSION['id']);
     }
     else {
@@ -11,10 +14,18 @@
     }
   }
 
+if($_SESSION['imagen_1'] != '') {
+  $img = $_SESSION['imagen_1'];
+}
+else{
+  $img = '/imgs/profile-photo-thumbnail.png';
+}
+
 ?>
 
 <div class="container">
-    <h1 class="profile-title">Hello, <?php echo $_SESSION['nombre']; ?> </h1><a href="logout.php" class="rose-link"> Cerrar sesion</a>
+    <h1 class="profile-title">Hello, <?php echo $_SESSION['nombre']; ?> </h1>
+    <a href="logout.php" class="rose-link cerrar-bonito"> Cerrar sesion</a>
 
     <!-- nombre lleva variable jiji -->
   <form action="profile.php" method="post" enctype="multipart/form-data">
@@ -23,14 +34,11 @@
         <!-- left column -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="text-center">
-            <img class ="thumbnail-profile" src="imgs/profile-photo-thumbnail.png" class="avatar" alt="avatar">
+            <img class ="thumbnail-profile" src="<?php echo $img ?>" class="avatar" alt="avatar">
             <label class="rose-link hide-input">
               Change picture
-              <input type="file" name="archivo">
+              <input type="file" name="imagen_1">
             </label>
-            <a class="rose-link underline-pink" href="eliminar.php?nombre=<?php echo $archivo; ?>">
-              Delete picture
-            </a>
           </div>
         </div>
 

@@ -4,7 +4,7 @@
   $url_pagina = $_SERVER['REQUEST_URI'];
   $url_pagina = str_replace('/', '', $url_pagina);
   $url_pagina = str_replace('.php', '', $url_pagina);
-?>
+?> 
 
 <main class="admin-options">
   <div class="container">

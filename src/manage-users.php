@@ -60,55 +60,6 @@
   ?>
 
   </div>
-
-
-
-<h2>Manage Passwords</h2>
-
-<div class= "users-title">
-  <div class="row">
-    <div>
-      <article class="col-12 col-xs-4 col-sm-4 col-md-4">
-        <!-- image -->
-        <p>Name</p>
-      </article>
-
-      <article class="col-12 col-xs-4 col-sm-4 col-md-4">
-        <!-- image -->
-        <p>Email</p>
-      </article>
-    </div>
-  </div>
-</div>
-
-<div class ="users-info">
-  <?php
-          for( $i=1; $i<8; $i++ ):
-  ?>
-  <div class="row">
-
-    <div>
-      <article class="col-12 col-xs-4 col-sm-4 col-md-4">
-        <!-- image -->
-        <p>Laura</p>
-      </article>
-
-      <article class="col-12 col-xs-4 col-sm-4 col-md-4">
-        <!-- image -->
-        <p>laura@gmail.com</p>
-      </article>
-
-      <article class="col-12 col-xs-4 col-sm-4 col-md-4">
-        <!-- image -->
-        <a href="" class="rose-link underline-pink"> Change password </a>
-      </article>
-    </div>
-  </div>
-  <?php
-          endfor;
-  ?>
-</div>
-
 </div>
 </main>
 

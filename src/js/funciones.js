@@ -8,4 +8,7 @@ $(function(){
     $('.primary').empty().append($img.hide().fadeIn('slow'));
   });
 
+  $('.alert').alert()
+  $().alert('close')
+  $().alert('dispose')
   });

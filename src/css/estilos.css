@@ -6,6 +6,53 @@ body{
     font-family: 'Poppins', Helvetica, sans-serif;
 }
 
+#phone-img{
+  display: none;
+}
+
+.col-12{
+  height:100%;
+}
+
+
+
+@media(max-width: 375px){
+  #carrusel{
+    display:none;
+  }
+	
+	#phone-img{
+		display: block!important;
+		width: 95%;
+		padding-right: 0px;
+		padding-left: 0px;
+		
+		
+	}
+	
+	#picture-phone{
+		width: 100%;
+	}
+	
+	.pad-picture{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
+.padding-bye{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
+@media(max-width: 763px){
+  .contenedor2{
+    margin-top: 20px;
+  }
+}
+
 .normal-text{
   font-family: 'Poppins';
   color: #252525;
@@ -125,15 +172,18 @@ body{
  }
 
  #carrusel{
+   margin-top: 15px;
      margin-bottom: 25px;
  }
 
  /*hero handbag--------------------------------------------------------*/
 #hero-handbag{
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 
 #hero-handbag img{
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -238,6 +288,14 @@ a:hover{
   font-size: 18px;
   font-weight: 400;
   color: #252525;
+}
+
+.free-shipping{
+  color: #FC7CA0;
+}
+
+#product-details{
+  margin-top: 50px;
 }
 
 .product-details h3{
@@ -495,6 +553,12 @@ input[type=number]::-webkit-outer-spin-button {
   padding-left: 10px;
   padding-top: 50px;
   padding-bottom: 15px;
+}
+
+.cerrar-bonito{
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .user-photos{

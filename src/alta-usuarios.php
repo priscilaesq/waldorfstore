@@ -1,3 +1,6 @@
+<script src="js/bootstrap.min.js"></script>
+<script src="js/funciones.js"></script>
+
 <?php
   include 'db.php';
 if($_POST != NULL):
@@ -10,9 +13,14 @@ if($_POST != NULL):
   $contrasena = MD5($contrasena);
 
   // verificar que no estén vacios
-  if ($nombre == '' || $apellido == ''|| $contrasena == '' || $correo == '') {
-    $message = "No se han capturado los datos correctamente";
-    echo "<script type='text/javascript'>alert('$message');</script>";
+  if ($nombre == '' || $apellido == ''|| $contrasena == '' || $correo == '') {?>
+    <div class="alert alert-warning alert-dismissible show" role="alert">
+      <strong>OOPSIS!</strong> Your data was not captured correctly.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <?php
   } else {
 
   ///seleccionar los renglones de la tabla
@@ -22,15 +30,26 @@ if($_POST != NULL):
   $resultcheck = mysqli_num_rows($result);
 
   ///Checar que el correo exista o no
-  if($resultcheck > 0){
-    $message = "Username or email already exists";
-    echo "<script type='text/javascript'>alert('$message');</script>";
+  if($resultcheck > 0){?>
+    <div class="alert alert-warning alert-dismissible show" role="alert">
+      <strong>OOPSIS!</strong> This email is already in use.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+<?php
   }else{
    $query = "INSERT INTO usuarios (nombre, apellido, correo, contrasena)
              VALUES ('$nombre','$apellido','$correo','$contrasena')";
-   $db->query($query);
-   $message = "CONGRATS! Account registration successful";
-   echo "<script type='text/javascript'>alert('$message');</script>";
+   $db->query($query);?>
+   <div class="alert alert-warning alert-dismissible show" role="alert">
+      <strong>CONGRATS!</strong> Your account is ready to be used, sign in!
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+   <?php
   }
 }
 endif;

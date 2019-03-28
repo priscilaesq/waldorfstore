@@ -10,7 +10,7 @@
             $url = str_replace('/', '', $url);
             $url = str_replace('.php', '', $url);
         ?>
-        <form action='subscribirse.php?url=<?php echo $url ?>' method='post'>
+        <form action="subscribirse.php?url=<?php echo $url ?>" method='post'>
             <input class="form-input" type="text" name="email" placeholder="Email address">
             <button class=primary-button> Subscribe </button>
         </form>
