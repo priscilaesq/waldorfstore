@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 28, 2019 at 07:18 AM
+-- Generation Time: Mar 28, 2019 at 08:30 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.2.14
 
@@ -96,7 +96,8 @@ INSERT INTO `subscriptores` (`id`, `email`) VALUES
 (6, 'katia_elena@hotmail.com'),
 (7, 'katiaelenam13@gmail.com'),
 (8, 'katia_elena@hotmail.com'),
-(9, 'katia_elena@hotmail.com');
+(9, 'katia_elena@hotmail.com'),
+(10, 'priscila.esquer@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -117,6 +118,15 @@ CREATE TABLE `travel` (
   `image_3` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `travel`
+--
+
+INSERT INTO `travel` (`id`, `product_name`, `price`, `descripcion`, `dimensions`, `materials`, `details`, `image_1`, `image_2`, `image_3`) VALUES
+(1, 'convertible backpack', '178.00', '\"it s a backpack, it s a crossbody, it s a shoulder bag, oh my! this sporty nylon bag will take you wherever you want to go.\"', '10\"h x 9\"w x 3.5\"d', 'supple nylon with matching trim', 'backpack with zipper closure', './imgs/travel/1/image_1.jpeg', './imgs/travel/1/image_2.jpeg', './imgs/travel/1/image_3.jpeg'),
+(2, ' jayne belt bag', '148.00', '\"our jayne belt bag is made to go with you anywhere (be it site-seeing on vacation or to the corner store). we designed it with a surprising amount of space to keep the important things close to your body. \"', '5\"h x 12\"w x 3\"d', 'quilted nylon', 'bag can be worn as crossbody or belt bag', './imgs/travel/2/image_1.jpeg', './imgs/travel/2/image_2.jpeg', './imgs/travel/2/image_3.jpeg'),
+(3, 'morley large tote', '298.00', '\"sophisticated, feminine, and unexpected hues mix together on the morely large tote--one of our most joyful bags in the collection.\"', '12\"h x 14\"w x 7\"d', 'italian polyester cotton blend fabric', 'tote bag with open top', './imgs/travel/3/image_1.jpeg', './imgs/travel/3/image_2.jpeg', './imgs/travel/3/image_3.jpeg');
+
 -- --------------------------------------------------------
 
 --
@@ -134,7 +144,7 @@ CREATE TABLE `usuarios` (
   `ciudad` varchar(40) DEFAULT NULL,
   `ocupacion` varchar(40) DEFAULT NULL,
   `hobbies` varchar(40) DEFAULT NULL,
-  `imagen_1` varchar(400) NOT NULL
+  `imagen_1` varchar(400) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -142,7 +152,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `contrasena`, `direccion`, `codigo_postal`, `ciudad`, `ocupacion`, `hobbies`, `imagen_1`) VALUES
-(1, 'Katia editada', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', '', 21290, 'Mexicali', 'Estudiante', 'Comer', './imgs/usuarios/1/imagen_1.jpeg');
+(1, 'Katia Elena', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', 'Lopez Quezada 868', 21290, 'Mexicali', 'Estudiante', 'Comer', './imgs/usuarios/1/imagen_1.jpeg'),
+(2, 'Priscila', 'Esquer', 'priscy@hotmail.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -263,13 +274,13 @@ ALTER TABLE `subscriptores`
 -- AUTO_INCREMENT for table `travel`
 --
 ALTER TABLE `travel`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuariosadmin`
