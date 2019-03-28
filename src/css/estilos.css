@@ -20,20 +20,20 @@ body{
   #carrusel{
     display:none;
   }
-	
+
 	#phone-img{
 		display: block!important;
 		width: 95%;
 		padding-right: 0px;
 		padding-left: 0px;
-		
-		
+
+
 	}
-	
+
 	#picture-phone{
 		width: 100%;
 	}
-	
+
 	.pad-picture{
 		padding-left: 0;
 		padding-right: 0;
@@ -227,6 +227,9 @@ a:hover{
   opacity: 0.70;
   }
 
+  .height-fixed{
+    height: 450px
+  }
 
 
 
@@ -750,7 +753,7 @@ label.rose-link {
 
 .margen-header-p
 {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 
