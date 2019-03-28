@@ -43,6 +43,16 @@
 </div>
 </section>
 
+<section id="phone-img">
+     		<div class="container-fluid pad-picture">
+     		<div class="row">
+      		<article class="col-sm-12 padding-bye">
+      			<img id="picture-phone" src="imgs/mobile-pic.jpg">
+		    </article>
+				</div>
+      </div>
+</section>
+
 
 <section id="trending">
 <div class="container">

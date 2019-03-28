@@ -6,6 +6,44 @@ body{
     font-family: 'Poppins', Helvetica, sans-serif;
 }
 
+#phone-img{
+  display: none;
+}
+
+
+
+
+@media(max-width: 375px){
+  #carrusel{
+    display:none;
+  }
+	
+	#phone-img{
+		display: block!important;
+		width: 95%;
+		padding-right: 0px;
+		padding-left: 0px;
+		
+		
+	}
+	
+	#picture-phone{
+		width: 100%;
+	}
+	
+	.pad-picture{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
+.padding-bye{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
 @media(max-width: 763px){
   .contenedor2{
     margin-top: 20px;
