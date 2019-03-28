@@ -93,14 +93,18 @@
 <section id="best-sellers">
   <div class="container">
     <div class="row">
-    <h1 class="Primary-title spacer">Best sellers</h1>
+    <h1 class="Primary-title spacer">Best-seller categories</h1>
     <article class="col-12 col-sm-6 col-md-4 col-lg-4 contenedor">
       <img src="imgs/home-bs-left.png">
+      <form action="travel.php">
       <button class="primary-button"> Shop now </button>
+      </form>
     </article>
     <article class="col-12 col-sm-6 col-md-8 col-lg-8 contenedor2">
       <img src="imgs/home-bs-right.png">
+      <form action="handbags.php">
       <button class="primary-button"> Shop now </button>
+      </form>
     </article>
     </div>
   </div>

@@ -6,6 +6,12 @@ body{
     font-family: 'Poppins', Helvetica, sans-serif;
 }
 
+@media(max-width: 763px){
+  .contenedor2{
+    margin-top: 20px;
+  }
+}
+
 .normal-text{
   font-family: 'Poppins';
   color: #252525;
