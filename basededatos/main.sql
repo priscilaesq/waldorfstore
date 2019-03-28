@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 27, 2019 at 11:57 PM
+-- Generation Time: Mar 28, 2019 at 05:54 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.2.14
 
@@ -38,7 +38,9 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `img`) VALUES
-(8, './imgs/banners/8/img.jpeg');
+(9, './imgs/banners/9/img.jpg'),
+(10, './imgs/banners/10/img.jpg'),
+(11, './imgs/banners/11/img.jpg');
 
 -- --------------------------------------------------------
 
@@ -67,7 +69,11 @@ INSERT INTO `handbags` (`id`, `product_name`, `price`, `descripcion`, `dimension
 (8, 'margaux medium satchel', '298.00', '\"our margaux medium satchel is defined by its curved, feminine silhouette, molded handles and functional interior. crafted from refined grain leather, it features two slip pockets and a domed zipper compartment\"', '7.5\"h x 10.75\"w x 4.75\"d', 'refined grain leather', 'satchel with zipper closure, two interior slide pockets, interior zipper, pocket dual exterior pockets', './imgs/handbags/8/image_1.jpeg', './imgs/handbags/8/image_2.jpeg', './imgs/handbags/8/image_3.jpeg'),
 (9, 'margaux spade stud medium satchel', '358.00', '\"our margaux medium satchel is defined by its curved, feminine silhouette, molded handles and functional interior. crafted from refined grain leather and sprinkled with spade studs, it features two slip pockets and a domed zipper compartment\"', '7\"h x 10\"w x 4\"d', 'refined grain leather', 'interior zipper pocket, interior slide pocket, optional (and adjustable) shoulder strap', './imgs/handbags/9/image_1.jpeg', './imgs/handbags/9/image_2.jpeg', './imgs/handbags/9/image_3.jpeg'),
 (10, 'nicola twistlock shoulder bag', '398.00', '\"in the wise words of plato, \"things are not always as they seem.\" such is the case with our nicola twistlock medium shoulder bag. crafted from smooth leather and gently structured for everyday use\"', '6\"h x 9\"w x 2.1\"d', 'smooth italian leather', 'spade heart twistlock closure, interior zipper pocket', './imgs/handbags/10/image_1.jpeg', './imgs/handbags/10/image_2.jpeg', './imgs/handbags/10/image_3.jpeg'),
-(11, 'sam denim medium satchel', '198.00', '\"our story began in 1993 with a boxy, black nylon handbag called sam. we wanted something utilitarian and timeless--a bag that could go with everything from jeans to a cocktail dress.\"', '7.8\"h x 9\"w x 5\"d', 'denim', 'satchel with open top and tie closure, interior zipper pocket', './imgs/handbags/11/image_1.jpeg', './imgs/handbags/11/image_2.jpeg', './imgs/handbags/11/image_3.jpeg');
+(11, 'sam denim medium satchel', '198.00', '\"our story began in 1993 with a boxy, black nylon handbag called sam. we wanted something utilitarian and timeless--a bag that could go with everything from jeans to a cocktail dress.\"', '7.8\"h x 9\"w x 5\"d', 'denim', 'satchel with open top and tie closure, interior zipper pocket', './imgs/handbags/11/image_1.jpeg', './imgs/handbags/11/image_2.jpeg', './imgs/handbags/11/image_3.jpeg'),
+(12, ' andi canteen bag', '298.00', '\"our andi canteen bag is a modern take on the classic, feminine hatbox shape. done in smooth italian leather with an enamel spade detail, it features a top handle and includes an adjustable crossbody strap that clips on and off. \"', '7\"h x 7.7\"w x 2.5\"d', 'italian smooth leather, solid faille lining', 'crossbody bag with zip-around closure', './imgs/handbags/12/image_1.jpeg', './imgs/handbags/12/image_2.jpeg', './imgs/handbags/12/image_3.jpeg'),
+(16, 'rose small convertible crossbody', '258.00', '\"we love the mix of old and new in our rose small convertible crossbody bag. the classic boxy coated-straw body and adjustable chain strap radiate major vintage vibes.\"', '5\"h x 7.5\"w x 3\"d', 'coated straw with leather, trim solid faille lining', 'crossbody bag with zipper closure, 3 interior card slots', './imgs/handbags/16/image_1.jpeg', './imgs/handbags/16/image_2.jpeg', './imgs/handbags/16/image_3.jpeg'),
+(17, 'polly large convertible crossbody', '258.00', '\"we made sure every inch would be functional when we designed our polly large convertible crossbody bag.  it has a roomy interior with a large slip pocket for organization. \"', '6\"h x 9\"w x 2\"d', 'pebbled leather, spade floral jacquard lining', 'crossbody bag with zip flap closure', './imgs/handbags/17/image_1.jpeg', './imgs/handbags/17/image_2.jpeg', './imgs/handbags/17/image_3.jpeg'),
+(18, 'vivian medium bucket bag', '358.00', '\"we agree--our vivian medium bucket bag is really nice to look at--which is why we made sure it would stay that way. the crossgrain leather is luxe but also durable.\"', '10\"h x 10.6\"w x 6\"d', 'crossgrain leather, faux microsuede lining', 'elbow bag with drawstring closure, interior slide pocket', './imgs/handbags/18/image_1.jpeg', './imgs/handbags/18/image_2.jpeg', './imgs/handbags/18/image_3.jpeg');
 
 -- --------------------------------------------------------
 
@@ -85,10 +91,12 @@ CREATE TABLE `subscriptores` (
 --
 
 INSERT INTO `subscriptores` (`id`, `email`) VALUES
-(1, 'isamel@holis.com'),
-(2, ''),
-(3, 'ISMAEL@ENTRAENCATARSIS.COM'),
-(4, 'katia@holis.com');
+(4, 'katia@holis.com'),
+(5, 'katia_elena@hotmail.com'),
+(6, 'katia_elena@hotmail.com'),
+(7, 'katiaelenam13@gmail.com'),
+(8, 'katia_elena@hotmail.com'),
+(9, 'katia_elena@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -134,7 +142,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `contrasena`, `direccion`, `codigo_postal`, `ciudad`, `ocupacion`, `hobbies`, `imagen_1`) VALUES
-(1, 'Katia editada', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', '', 21290, 'Mexicali', 'Estudiante', 'Comer', '');
+(1, 'Katia editada', 'Murillo', 'katiaelenam13@gmail.com', '1fe45702c1cd23247ad49dd556136421', '', 21290, 'Mexicali', 'Estudiante', 'Comer', './imgs/usuarios/1/imagen_1.jpeg');
 
 -- --------------------------------------------------------
 
@@ -228,25 +236,25 @@ ALTER TABLE `wallets`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `handbags`
 --
 ALTER TABLE `handbags`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `subscriptores`
 --
 ALTER TABLE `subscriptores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `travel`
 --
 ALTER TABLE `travel`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
