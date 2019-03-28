@@ -11,7 +11,7 @@
 </section>
 
 <section id="handbags">
-<div class="container"> 
+<div class="container">
   <h1 class="Primary-title spacer">Travel</h1>
   <div class="row">
   <?php
@@ -23,12 +23,12 @@
       <a href="<?php echo $url ?>"><img class="img-home" src=<?php echo $travel['image_1'] ?>></a>
       <a href="<?php echo $url ?>"><h3 class="products-title"> <?php echo $travel['product_name'] ?> </h3></a>
       <p class="products-price"> $<?php echo $travel['price'] ?> </p>
-      </article> 
+      </article>
       <?php
   endforeach;
 ?>
 </div>
-</div> 
+</div>
 </section>
 
 

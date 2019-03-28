@@ -21,7 +21,7 @@ include("funciones.php");
   $query = "INSERT INTO handbags (product_name, price, descripcion, dimensions, materials, details)
              VALUES ('$product_name','$price','$descripcion','$dimensions','$materials','$details')";
   $result = $db->query($query);
-
+  
   //OBTENER ID DEL HANDBAG SUBIDO
   $id = $db->insert_id;
   $tabla = 'handbags';

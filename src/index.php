@@ -60,49 +60,27 @@
       </div>
 </section>
 
-
-<section id="trending">
+<section id="handbags">
 <div class="container">
-  <h1 class="Primary-title spacer">Trending now</h1>
+  <h1 class="Primary-title spacer">Trending: Handbag edition</h1>
   <div class="row">
+  <?php
+    $handbags = get("handbags");
+    $cont = 0;
+    foreach($handbags as $handbag):
+      if($cont > 5){ continue; } $cont++;
+
+      $url = "product-1-handbags.php?id=".$handbag['id'];
+  ?>
       <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-watson-lane.png">
-      <h3 class="product-title"> Watson lane hartley </h3>
-      <p class="price-home"> $198.00 </p>
+      <a href="<?php echo $url ?>"><img class="img-home" src=<?php echo $handbag['image_1'] ?>></a>
+      <a href="<?php echo $url ?>"><h3 class="products-title"> <?php echo $handbag['product_name'] ?> </h3></a>
+      <p class="products-price"> $<?php echo $handbag['price'] ?> </p>
       </article>
-
-      <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-dorie-medium.png">
-      <h3 class="product-title"> Dorie medium bag </h3>
-      <p class="price-home"> $398.00 </p>
-      </article>
-
-      <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-jayne-large.png">
-      <h3 class="product-title"> Jayne large backpack </h3>
-      <p class="price-home"> $278.00 </p>
-      </article>
-
-
-
-      <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-nicola-twistlock.png">
-      <h3 class="product-title"> Nicola twistlock shoulder </h3>
-      <p class="price-home"> $348.00 </p>
-      </article>
-
-      <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-amelia-spade.png">
-      <h3 class="product-title"> Amelia spade flower convertible </h3>
-      <p class="price-home"> $398.00 </p>
-      </article>
-
-      <article class="col-12 col-sm-6 col-md-4">
-      <img class="img-home" src="imgs/home-slim-bifold.png">
-      <h3 class="product-title"> Sylvia wildflower mini wallet </h3>
-      <p class="price-home"> $98.00 </p>
-      </article>
-  </div>
+      <?php
+  endforeach;
+?>
+</div>
 </div>
 </section>
 
